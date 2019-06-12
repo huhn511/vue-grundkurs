@@ -3,20 +3,18 @@
   .content
     h1
       span.logo
-      span Eagle
+      span Vue
       span.grey .js
-    h2 A slideshow framework for hackers
+    h2 The Progressive JavaScript Framework
 
-    iframe.github-star(src="https://ghbtns.com/github-btn.html?user=zulko&repo=eagle.js&type=star&count=true&size=large"
+    iframe.github-star(src="https://ghbtns.com/github-btn.html?user=vuejs&repo=vue&type=star&count=true&size=large"
                        frameborder="0" scrolling="0" width="160px" height="30px")
     p.
-      Eagle.js is a web-based slideshow framework for Vue.js.
-      It supports animations, themes, interactive widgets (for web demos),
-      and makes it easy to reuse components, slides and styles across presentations.
+      Vue.js ist ein <strong>clientseitiges JavaScript-Webframework</strong>
+      zum Erstellen von <strong>Single-Page-Webanwendungen</strong> nach dem MVVM-Muster
 
     p.
-      Most of all, Eagle aims at offering a simple and very hackable API so you
-      can get off the beaten tracks and craft the slideshows you really want.
+      Diese Slides geben dir einen Unberblick und helfen dir Webseiten und Apps mit Vue.js zu erstellen. Viel Spaß!
 
     .thumbnails
       .box-card(v-for='slideshow in slideshows')
@@ -121,10 +119,10 @@ a {
 
 .logo {
   display: inline-block;
-  width: 130px;
+  width: 100%;
   height:90px;
   margin-right: 0.1em;
-  background-image: url(./logo.svg);
+  background-image: url(assets/logos/vue.png);
   background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
