@@ -1,10 +1,30 @@
 <template>
   <div id="MyFirstSlideshow">
     <div class="eg-slideshow">
-      <slide>
-        <h2>Vue.js Grundkurs</h2>
-      </slide>
       <slide :steps="5" enter="bounceInRight" leave="bounceOutDown">
+        <h2>Vue.js Grundkurs</h2>
+          <eg-transition enter="bounceInRight" leave="bounceOutRight">
+            <p v-if="step &gt;= 2">
+              <b>Was ist Vue?</b>
+            </p>
+          </eg-transition>
+        <eg-transition enter="bounceInLeft" leave="bounceOutLeft">
+            <p v-if="step &gt;= 3">
+               <b>Die Geschichte.</b>
+            </p>
+          </eg-transition>
+          <eg-transition enter="bounceInRight" leave="bounceOutRight">
+            <p v-if="step &gt;= 4">
+              <b>Die Grundlagen.</b>
+            </p>
+          </eg-transition>
+          <eg-transition enter="bounceInLeft" leave="bounceOutLeft">
+            <p v-if="step &gt;= 5">
+              <b>Live Coding.</b>
+            </p>
+          </eg-transition>
+      </slide>
+      <slide :steps="6" enter="bounceInRight" leave="bounceOutDown">
         <h3>
           Was ist
           <div class="inline animated infinite pulse heart"></div>Vue.js?
@@ -25,9 +45,14 @@
               <b>Vue.js</b> kann mit anderen Libraries kombiniert werden.
             </p>
           </eg-transition>
-          <eg-transition enter="bounceInLeft" leave="bounceOutLeft">
+          <eg-transition enter="bounceInRight" leave="bounceOutLeft">
             <p v-if="step &gt;= 5">
-              <b>Vue.js</b> ist sehr kompakt. (min Variante: ~20 Kilobyte)
+              <b>Vue.js</b> ist sehr kompakt (min Variante: ~20 Kilobyte).
+            </p>
+          </eg-transition>
+           <eg-transition enter="bounceInLeft" leave="bounceOutLeft">
+            <p v-if="step &gt;= 6">
+              <b>Vue.js</b> ist sehr Einsteigerfreundlich.
             </p>
           </eg-transition>
         </div>
@@ -104,7 +129,7 @@
       <slide enter="bounceInDown">
         <eg-transition enter="fadeIn" leave="fadeOut">
           <eg-modal>
-            <h3>Vue.js Founder:</h3>
+            <h3>Vue.js Creator:</h3>
             <div class="center" :style="{display: 'flex'}">
               <div :style="{width: '50%'}">
                 <img src="../../assets/evan_you.jpg" :style="{height: '10em'}">
@@ -127,6 +152,72 @@
             </div>
           </eg-modal>
         </eg-transition>
+      </slide>
+      <slide :steps="6" enter="bounceInRight" leave="bounceOutDown">
+        <h2>Vue.js Ecosystem</h2>
+          <eg-transition enter="bounceInRight" leave="bounceOutRight">
+            <p v-if="step &gt;= 2">
+              <a href="https://github.com/vuejs/vue-cli">vue-cli</a>
+              	- Project scaffolding
+            </p>
+          </eg-transition>
+        <eg-transition enter="bounceInLeft" leave="bounceOutLeft">
+            <p v-if="step &gt;= 3">
+              <a href="https://github.com/vuejs/vue-router">vue-router</a>
+              	- Single-page application routing
+            </p>
+          </eg-transition>
+          <eg-transition enter="bounceInRight" leave="bounceOutRight">
+            <p v-if="step &gt;= 4">
+              <a href="https://github.com/vuejs/vuex">vuex</a>
+              	- Large-scale state management
+            </p>
+          </eg-transition>
+          <eg-transition enter="bounceInLeft" leave="bounceOutLeft">
+            <p v-if="step &gt;= 5">
+              <a href="https://github.com/vuejs/vue-devtools">vue-devtools</a>
+              	- Browser DevTools extension
+            </p>
+          </eg-transition>
+           <eg-transition enter="bounceInLeft" leave="bounceOutLeft">
+            <p v-if="step &gt;= 6">
+              <a href="https://github.com/vuejs/awesome-vue">Awesome Vue.js</a>
+              	- Und viel, viel mehr!
+            </p>
+          </eg-transition>
+      </slide>
+      <slide :steps="7" enter="bounceInRight" leave="bounceOutDown">
+        <h2>Live Coding</h2>
+          <eg-transition enter="bounceInRight" leave="bounceOutRight">
+            <p v-if="step &gt;= 2">
+              Eine App von Anfang bis Ende: <a target="_blank" href="https://huhn511.github.io/buddybuilder/#/">Buddy Builder (100in100)</a>.
+            </p>
+          </eg-transition>
+          <eg-transition enter="bounceInRight" leave="bounceOutRight">
+            <p v-if="step &gt;= 3">
+              Neues Projekt erstellen mit vue-cli
+            </p>
+          </eg-transition>
+          <eg-transition enter="bounceInRight" leave="bounceOutRight">
+            <p v-if="step &gt;= 4">
+              Inputs und Data Binding.
+            </p>
+          </eg-transition>
+           <eg-transition enter="bounceInRight" leave="bounceOutRight">
+            <p v-if="step &gt;= 5">
+              Button und Clickhandler.
+            </p>
+          </eg-transition>
+          <eg-transition enter="bounceInRight" leave="bounceOutRight">
+            <p v-if="step &gt;= 6">
+              Componenten.
+            </p>
+          </eg-transition>
+           <eg-transition enter="bounceInRight" leave="bounceOutRight">
+            <p v-if="step &gt;= 7">
+              Kurze Einführung in IOTA.
+            </p>
+          </eg-transition>
       </slide>
     </div>
   </div>
