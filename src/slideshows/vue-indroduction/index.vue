@@ -24,12 +24,13 @@
           </p>
         </eg-transition>
       </slide>
-      <slide :steps="6" enter="bounceInRight" leave="bounceOutDown">
+      <slide :steps="3" enter="bounceInRight" leave="bounceOutDown">
                <h3>
           Was ist
           <div class="inline animated infinite pulse heart"></div>Vue.js?
         </h3>
-       <iframe class="center" src="https://vuejs.org/" width="100%" height="800px" frameborder="0"></iframe>
+        <p v-if="step &gt;= 2"><a href="https://vuejs.org/">https://vuejs.org/</a></p>
+       <iframe  v-if="step &gt;= 3" class="center" src="https://vuejs.org/" width="100%" height="800px" frameborder="0"></iframe>
       </slide>
       <slide :steps="6" enter="bounceInRight" leave="bounceOutDown">
         <h3>
